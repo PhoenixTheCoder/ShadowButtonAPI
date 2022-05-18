@@ -69,4 +69,4 @@ new SUButton("Button Title", "Button Tool Tip", (v) => {
 new SULabel(1, 1, "Content");
 ```
 
-### If you have any questions about this, join (https://discord.gg/Av39q7Aecg)[ShadowVRC's Discord / Foonix's Discord]
+### If you have any questions about this, join https://discord.gg/Av39q7Aecg
