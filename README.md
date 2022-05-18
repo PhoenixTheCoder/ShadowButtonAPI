@@ -1,4 +1,4 @@
-# ShadowButtonAPI
+# VRChat ShadowButtonAPI
 
 ### Very crappy ButtonAPI made by Foonix#0001
 ### Mostly inspired by EvilEye's ButtonAPI
