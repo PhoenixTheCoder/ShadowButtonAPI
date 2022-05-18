@@ -18,24 +18,24 @@ using VRC.UI.Core.Styles;
 // Inspired by EvilEye's ButtonAPI
 // Changed and added Selected User Buttons
 
-namespace Shadow.Buttons
+namespace ShadowButtonAPI
 {
-	public class QMLable
+	public class QMLabel
 	{
 		public static QuickMenuStuff qmStuff = new QuickMenuStuff();
 
 		public TextMeshProUGUI text;
-		public GameObject lable;
-		public QMLable(Transform menu, float x, float y, string contents)
+		public GameObject label;
+		public QMLabel(Transform menu, float x, float y, string contents)
 		{
-			lable = UnityEngine.Object.Instantiate<GameObject>(qmStuff.quickMenu.transform.Find("Container/Window/QMParent/Menu_Dashboard/ScrollRect/Viewport/VerticalLayoutGroup/Header_QuickLinks").gameObject, menu);
-			lable.name = contents;
-			lable.transform.localPosition = new Vector3(x, y, 0);
-			text = lable.GetComponentInChildren<TextMeshProUGUI>();
+			label = UnityEngine.Object.Instantiate<GameObject>(qmStuff.quickMenu.transform.Find("Container/Window/QMParent/Menu_Dashboard/ScrollRect/Viewport/VerticalLayoutGroup/Header_QuickLinks").gameObject, menu);
+			label.name = contents;
+			label.transform.localPosition = new Vector3(x, y, 0);
+			text = label.GetComponentInChildren<TextMeshProUGUI>();
 			text.text = contents;
 			text.enableAutoSizing = true;
 			text.color = Color.white;
-			lable.gameObject.SetActive(false);
+			label.gameObject.SetActive(false);
 		}
 	}
 
@@ -527,7 +527,7 @@ namespace Shadow.Buttons
 		QuickMenuStuff qmStuff = new QuickMenuStuff();
 		public SULabel(float x, float y, string content)
 		{
-			new QMLable(qmStuff.selectedUserMenuQM.transform.Find("ScrollRect/Viewport/VerticalLayoutGroup/Buttons_UserActions").transform, x, y, content);
+			new QMLabel(qmStuff.selectedUserMenuQM.transform.Find("ScrollRect/Viewport/VerticalLayoutGroup/Buttons_UserActions").transform, x, y, content);
 		}
 	}
 }
